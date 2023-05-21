@@ -22,9 +22,8 @@ Test code:
 
 Diffs:
      memmove: |this is a good nyancat !
-|
-  ft_memmove: |phis is a good nyancat !
-|
+C∞ÕøıH¯ˇˇˇˇˇˇˇE|
+  ft_memmove: ||
 
 [fail]: your memmove does not work with \0 and others unsigned char codes
 Test code:
@@ -41,7 +40,7 @@ Test code:
 
 Diffs:
      memmove: |thiˇs i˙s |
-  ft_memmove: ||
+  ft_memmove: |¯hiˇs i˙s |
 
 [fail]: your memmove does not support the overlap (test 1)
 Test code:
@@ -62,7 +61,7 @@ Test code:
 
 Diffs:
      memmove: |thithi√ü √üﬁ≠æÔtri√±g will be √∏v√©rlap√©d !
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHQI|
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAò–lH4V|
   ft_memmove: |thi√hi√ü √üﬁ≠æÔtri√±g will be √∏v√©rlap√©d !
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAthithi√ü √üﬁ≠æÔtri√±g will be √∏v√©rlap√©d !
 AAAAAAAAAAAAAA|
@@ -229,7 +228,7 @@ Test code:
 
 Diffs:
      strlcpy: |\x42 \x42 \x42 \x42 \x0  \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 |
-  ft_strlcpy: |\x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 |AAAAAAAAAAAAAAAAAAAAAAHQI|
+  ft_strlcpy: |\x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 |AAAAAAAAAAAAAAAAAAAAAAò–lH4V|
   ft_memmove: |thi√hi√ü √üﬁ≠æÔtri√±g will be √∏v√©rlap√©d !
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAthithi√ü √üﬁ≠æÔtri√±g will be √∏v√©rlap√©d !
 AAAAAAAAAAAAAA|
@@ -258,7 +257,7 @@ Test code:
 
 Diffs:
      strlcpy: |\x68 \x0  \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 |
-  ft_strlcpy: |\x41 \x0  \x6c \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 |AAAAAAAAAAAAAAAAAAAAAAHQI|
+  ft_strlcpy: |\x41 \x0  \x6c \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 |AAAAAAAAAAAAAAAAAAAAAAò–lH4V|
   ft_memmove: |thi√hi√ü √üﬁ≠æÔtri√±g will be √∏v√©rlap√©d !
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAthithi√ü √üﬁ≠æÔtri√±g will be √∏v√©rlap√©d !
 AAAAAAAAAAAAAA|
@@ -287,7 +286,7 @@ Test code:
 
 Diffs:
      strlcpy: |\x0  \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 |
-  ft_strlcpy: |\x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 |AAAAAAAAAAAAAAAAAAAAAAHQI|
+  ft_strlcpy: |\x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 \x41 |AAAAAAAAAAAAAAAAAAAAAAò–lH4V|
   ft_memmove: |thi√hi√ü √üﬁ≠æÔtri√±g will be √∏v√©rlap√©d !
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAthithi√ü √üﬁ≠æÔtri√±g will be √∏v√©rlap√©d !
 AAAAAAAAAAAAAA|
@@ -348,21 +347,7 @@ Test code:
 Diffs:
 
 
-ft_strdup:     [OK] [FAILED] [FAILED] [KO] [FAILED] [OK] [OK] 
-[fail]: your strdup doesn't work with basic input
-Test code:
-	char *str;
-	char *tmp = "I malloc so I am.";
-
-	str = ft_strdup(tmp);
-	if (strcmp(str, tmp))
-		exit(TEST_FAILED);
-	free(str);
-	exit(TEST_SUCCESS);
-
-Diffs:
-
-
+ft_strdup:     [OK] [OK] [FAILED] [KO] [FAILED] [OK] [OK] 
 [fail]: your strdup don't work with empty string
 Test code:
 	char *str;
@@ -443,8 +428,7 @@ Test code:
 
 Diffs:
       substr: |t want this part ###|
-   ft_substr: |t want this part ###))
-	 |
+   ft_substr: |t want this part ###oc(0|
 
 [crash]: your substr does not work when start >= ft_strlen(s)
 Test code:
@@ -475,8 +459,7 @@ Test code:
 
 Diffs:
      strjoin: |my favorite animal is the nyancat|
-  ft_strjoin: |my favorite animal is 
-	Q˘the nyancata,1|
+  ft_strjoin: |my favorite animal is (0ëthe nyancata,1|
 
 [fail]: your strjoin does not allocate the memory
 Test code:
@@ -497,8 +480,7 @@ Test code:
 
 Diffs:
      strjoin: |my favorite animal is the nyancat|
-  ft_strjoin: |my favorite animal is 
-	Åthe nyancat||
+  ft_strjoin: |my favorite animal is (0Åthe nyancat||
 
 [fail]: your strjoin does not work with overlap input
 Test code:
@@ -527,8 +509,7 @@ Test code:
 
 Diffs:
      strjoin: |where is my malloc ???|
-  ft_strjoin: |where is my malloc ???
-	Å|
+  ft_strjoin: |where is my malloc ???(0Å|
 
 ft_strtrim:    [FAILED] [FAILED] [FAILED] [CRASH] [CRASH] [KO] [FAILED] [OK] [FAILED] {not protected}
 [fail]: your strtrim does not work with basic input

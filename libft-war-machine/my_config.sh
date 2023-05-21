@@ -5,7 +5,7 @@
 ###################################
 
 #Edit the next line with the path of your libft project.
-PATH_LIBFT="/nfs/homes/r-afonso/projetos/1-libft"
+PATH_LIBFT="../src"
 
 #If you use a relative path, don't put double quotes.
 #For example :

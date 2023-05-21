@@ -15,7 +15,7 @@
 #################
 
 #	Libft Makefile path
-LIBFTDIR	=	/nfs/homes/r-afonso/projetos/1-libft
+LIBFTDIR	=	/home/rbatista/Dev/projetos_42/1-libft/src
 
 #	Sources
 SRCDIR		=	./
