@@ -15,14 +15,32 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	if (ft_strlen(dst) >= size -1)
+	size_t	index;
+	size_t	len;
+
+	len = ft_strlen(src);
+	index = 0;
+	
+	if (size == 0)
+		return (len);
+	else
 	{
-		while (size - 1 > 0)
+		while (--size && *(src + index))
 		{
-			*(dst + size) = *(src + size);
-			size--;
-		}
-		*(dst + size) = '\0';
+			*(dst + index) = *(src + index);
+			index++;
+		}	
+		*(dst + index) = '\0';
 	}
-	return (ft_strlen(src));
+	return (len);
 }
+
+// int main()
+// {
+// 	char src[] = "coucou";
+// 	char dest[10] = {'A','A','A','A','A','A','A','A','A','A'};
+
+// 	size_t t;
+// 	t = ft_strlcpy(dest, src, 2);
+// 	return (0);
+// }

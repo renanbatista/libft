@@ -19,6 +19,8 @@ char	*ft_strrchr(const char *s, int c)
 	int		finded;
 
 	finded = 0;
+	if (c < 0 || c > 126)
+		return ((char *)s);
 	s_last = (char *) s;
 	while (*(s))
 	{
