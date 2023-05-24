@@ -85,10 +85,10 @@ char	*ft_itoa(int n)
 // TENHO n = 111
 // ORECUSI DE str = {1, 1, 1}
 // #include <stdio.h>
-// #include <limits.h>
-// int main()
-// {
-// 	ft_itoa(0);
-// 	// printf("ft_itoa(123);
-// 	return (0);
-// }
+#include <limits.h>
+int main()
+{
+	ft_itoa(0);
+	// printf("ft_itoa(123);
+	return (0);
+}

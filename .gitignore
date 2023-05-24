@@ -54,3 +54,4 @@ dkms.conf
 *.out
 *.o
 libft.a
+meu_programa
