@@ -28,6 +28,7 @@ FILES = \
 	ft_substr \
 	ft_strjoin \
 	ft_strtrim \
+	ft_itoa \
 
 SRC_DIR = ./
 SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(FILES)))

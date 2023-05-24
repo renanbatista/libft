@@ -34,13 +34,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (len);
 }
-
-// int main()
-// {
-// 	char src[] = "coucou";
-// 	char dest[10] = {'A','A','A','A','A','A','A','A','A','A'};
-
-// 	size_t t;
-// 	t = ft_strlcpy(dest, src, 2);
-// 	return (0);
-// }

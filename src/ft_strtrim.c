@@ -61,6 +61,7 @@ static int	end_string(char const *s1, char const *set)
 		if (control == 0)
 			break ;
 		control = 0;
+		index--;
 	}
 	return (index);
 }
@@ -72,17 +73,36 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		stop;
 
-	index = 0;
 	start = start_string(s1, set);
 	stop = end_string(s1, set);
-	str = (char *) malloc(sizeof(char) * (stop - start));
-	if (str == NULL)
-		return (NULL);
-	while (start <= stop)
+	if (stop < start)
 	{
-		*(str + index) = *(s1 + start);
-		start++;
-		index++;
+		str = (char *)malloc(sizeof(char));
+		if (str == NULL)
+			return (NULL);
+		*str = '\0';
+	}
+	else
+	{
+		str = (char *)malloc(sizeof(char) * (stop - start + 2));
+		if (str == NULL)
+			return (NULL);
+		index = 0;
+		while (start <= stop)
+		{
+			*(str + index) = *(s1 + start);
+			start++;
+			index++;
+		}
+		*(str + index) = '\0';
 	}
 	return (str);
 }
+
+// int	main(void)
+// {
+// 	char	*s;
+
+// 	s = ft_strtrim("   xxxtripouille   xxx", " x");
+// 	return (0);
+// }

@@ -34,11 +34,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	*(dst + size_dst) = '\0';
 	return (size_src + size_dst);
 }
-
-// int main()
-// {
-// 	char dest[] = "BBBB";
-// 	char * src = (char *)"AAAAAAAAA";
-// 	ft_strlcat(dest, src, 6);
-// 	return (0);
-// }

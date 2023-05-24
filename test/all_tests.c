@@ -146,6 +146,11 @@ TEST_GROUP_RUNNER(ft_split)
 	RUN_TEST_CASE(ft_split, split_string_with_separator);
 }
 
+TEST_GROUP_RUNNER(ft_itoa)
+{
+	RUN_TEST_CASE(ft_itoa, convert_int_to_string);
+}
+
 static void	run_all_tests(void)
 {
 	RUN_TEST_GROUP(ft_bzero);
@@ -175,6 +180,7 @@ static void	run_all_tests(void)
 	RUN_TEST_GROUP(ft_strjoin);
 	RUN_TEST_GROUP(ft_strtrim);
 	RUN_TEST_GROUP(ft_split);
+	RUN_TEST_GROUP(ft_itoa);
 }
 
 int	main(int argc, const char *argv[])

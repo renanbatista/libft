@@ -1,0 +1,17 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Compilar e depurar",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/meu_programa",
+			"args": [],
+			"cwd": "${workspaceFolder}",
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"preLaunchTask": "compilar",
+			"miDebuggerPath": "/usr/bin/gdb"
+		}
+	]
+}
