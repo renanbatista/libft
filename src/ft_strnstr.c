@@ -6,7 +6,7 @@
 /*   By: r-afonso < r-afonso@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:35:31 by r-afonso          #+#    #+#             */
-/*   Updated: 2023/05/19 11:04:36 by r-afonso         ###   ########.fr       */
+/*   Updated: 2023/05/24 18:34:26 by r-afonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	index = 0;
 	len_sub = ft_strlen(little);
 	if (len_sub == 0)
-		return ((char *) big);
+		return ((char *)big);
 	while (*big && len >= len_sub)
 	{
 		result = ft_strncmp(big, little, len_sub);
 		if (result == 0)
-			return ((char *) big + index);
+			return ((char *)big + index);
 		big++;
 		len--;
 	}

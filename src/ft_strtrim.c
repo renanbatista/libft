@@ -77,16 +77,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	stop = end_string(s1, set);
 	if (stop < start)
 	{
-		str = (char *)malloc(sizeof(char));
-		if (str == NULL)
-			return (NULL);
+		str = (char *)ft_calloc(1, sizeof(char));
 		*str = '\0';
 	}
 	else
 	{
-		str = (char *)malloc(sizeof(char) * (stop - start + 2));
-		if (str == NULL)
-			return (NULL);
+		str = (char *)ft_calloc((stop - start + 2), sizeof(char));
 		index = 0;
 		while (start <= stop)
 		{
@@ -98,11 +94,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	char	*s;
-
-// 	s = ft_strtrim("   xxxtripouille   xxx", " x");
-// 	return (0);
-// }

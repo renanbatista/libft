@@ -18,10 +18,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	char	*s1_p;
 	char	*s2_p;
 
-	s1_p = (char *) s1;
-	s2_p = (char *) s2;
-
-	if(n == 0)
+	s1_p = (char *)s1;
+	s2_p = (char *)s2;
+	if (n == 0)
 		return (0);
 	while (*(s1_p) == *(s2_p) && --n)
 	{

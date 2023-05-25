@@ -151,6 +151,36 @@ TEST_GROUP_RUNNER(ft_itoa)
 	RUN_TEST_CASE(ft_itoa, convert_int_to_string);
 }
 
+TEST_GROUP_RUNNER(ft_strmapi)
+{
+	RUN_TEST_CASE(ft_strmapi, execute_funcition_in_a_new_string);
+}
+
+TEST_GROUP_RUNNER(ft_striteri)
+{
+	RUN_TEST_CASE(ft_striteri, execute_funcition_in_a_string);
+}
+
+TEST_GROUP_RUNNER(ft_putchar_fd)
+{
+	RUN_TEST_CASE(ft_putchar_fd, print_char_with_fd);
+}
+
+TEST_GROUP_RUNNER(ft_putstr_fd)
+{
+	RUN_TEST_CASE(ft_putstr_fd, print_string_with_fd);
+}
+
+TEST_GROUP_RUNNER(ft_putendl_fd)
+{
+	RUN_TEST_CASE(ft_putendl_fd, print_string_with_fd_and_newline);
+}
+
+TEST_GROUP_RUNNER(ft_putnbr_fd)
+{
+	RUN_TEST_CASE(ft_putnbr_fd, print_string_with_fd_and_newline);
+}
+
 static void	run_all_tests(void)
 {
 	RUN_TEST_GROUP(ft_bzero);
@@ -181,6 +211,11 @@ static void	run_all_tests(void)
 	RUN_TEST_GROUP(ft_strtrim);
 	RUN_TEST_GROUP(ft_split);
 	RUN_TEST_GROUP(ft_itoa);
+	RUN_TEST_GROUP(ft_strmapi);
+	RUN_TEST_GROUP(ft_striteri);
+	RUN_TEST_GROUP(ft_putchar_fd);
+	RUN_TEST_GROUP(ft_putendl_fd);
+	RUN_TEST_GROUP(ft_putnbr_fd);
 }
 
 int	main(int argc, const char *argv[])

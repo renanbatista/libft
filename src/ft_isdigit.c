@@ -12,9 +12,9 @@
 
 int	ft_isdigit(int c)
 {
-	char c_cast;
+	char	c_cast;
 
-	c_cast = (char) c;
+	c_cast = (char)c;
 	if (c_cast >= '0' && c_cast <= '9')
 		return (1);
 	return (0);

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: r-afonso < r-afonso@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:35:31 by r-afonso          #+#    #+#             */
-/*   Updated: 2023/05/18 21:27:57 by r-afonso         ###   ########.fr       */
+/*   Updated: 2023/05/24 09:11:07 by r-afonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ static int	count(long int n)
 	int	count;
 
 	count = 0;
+	if (n == 0)
+		return (1);
 	while (n != 0)
 	{
 		n /= 10;
@@ -29,6 +31,7 @@ static int	count(long int n)
 static char	*allocate(int signal, int digits)
 {
 	char	*str;
+
 	if (digits == 0)
 		str = (char *)ft_calloc(digits + signal + 2, sizeof(char));
 	else
@@ -46,11 +49,6 @@ static char	*zero_case_and_finish(char *str, long int n_long, int index)
 {
 	if (n_long != 0)
 		*(str + index) = '\0';
-	// else
-	// {
-	// 	*(str) = '0';
-	// 	*(str + 1) = '\0';
-	// }
 	return (str);
 }
 
@@ -60,35 +58,24 @@ char	*ft_itoa(int n)
 	char		*str;
 	int			index;
 	long int	n_long;
-	int			signal;
+	int			sign;
 
 	index = 0;
 	n_long = n;
-	signal = 0;
+	sign = 0;
 	digits = count(n_long);
 	if (n_long < 0)
 	{
-		signal = 1;
+		sign = 1;
 		n_long *= -1;
 	}
-	str = allocate(signal, digits);
+	str = allocate(sign, digits);
 	while (index <= digits - 1)
 	{
-		*(str + digits + signal - index - 1) = n_long % 10 + 48;
+		*(str + digits + sign - index - 1) = n_long % 10 + 48;
 		n_long = n_long / 10;
 		index++;
 	}
-	return (zero_case_and_finish(str, n_long, index));
-}
-
-
-// TENHO n = 111
-// ORECUSI DE str = {1, 1, 1}
-// #include <stdio.h>
-#include <limits.h>
-int main()
-{
-	ft_itoa(0);
-	// printf("ft_itoa(123);
-	return (0);
+	zero_case_and_finish(str, n_long, index);
+	return (str);
 }
