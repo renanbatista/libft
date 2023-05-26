@@ -11,8 +11,12 @@
 				"${file}",
 				"${workspaceFolder}/src/ft_strlen.c",
 				"${workspaceFolder}/src/ft_strlcpy.c",
+				"${workspaceFolder}/src/ft_strchr.c",
+				"${workspaceFolder}/src/ft_strdup.c",
+				"${workspaceFolder}/src/ft_substr.c",
 				"${workspaceFolder}/src/ft_calloc.c",
-				"${workspaceFolder}/src/ft_memset.c"
+				"${workspaceFolder}/src/ft_memset.c",
+				"${workspaceFolder}/src/ft_putchar_fd.c"
 			],
 			"group": {
 				"kind": "build",

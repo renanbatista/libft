@@ -6,30 +6,57 @@
 /*   By: r-afonso < r-afonso@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:35:31 by r-afonso          #+#    #+#             */
-/*   Updated: 2023/05/25 11:10:03 by r-afonso         ###   ########.fr       */
+/*   Updated: 2023/05/26 01:24:09 by r-afonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-/*
-* 1- Contar quantas palavras tem para alocar o tamanho 1D
-* 2- Alocar a primeira dimensão
-* 3- Começar a separar as palavras, alocando espaço para cada (2D)
-* 4- Copiar cada palavra para a segunda dimensão
-* 5- Retornar o ponteiro para a primeira dimensão
-*/
-
-static int	count_keywords(char const s, char c)
+static int	count_keywords(char *s, char c)
 {
-	char	*str;
-	
+	int	sun_keywords;
+
+	sun_keywords = 0;
+	while (*s)
+	{
+		if (*s == c)
+			s++;
+		else
+		{
+			sun_keywords++;
+			while (*s && *s != c)
+				s++;
+		}
+	}
+	return (sun_keywords);
 }
 
-char **ft_split(char const *s, char c);
+char	**ft_split(char const *s, char c)
 {
-	
-	return (str);
-}
+	char	**s_final;
+	int		len_keywords;
+	int		len;
+	int		index;
 
+	index = 0;
+	if (s == NULL)
+		return (NULL);
+	len_keywords = count_keywords((char *)s, c);
+	s_final = (char **)ft_calloc(len_keywords + 1, sizeof(char *));
+	if (s_final == NULL)
+		return (NULL);
+	while (len = 0, index < len_keywords)
+	{
+		while (*s && *s == c)
+			s++;
+		while (*(s + len) && *(s + len) != c)
+			len++;
+		*(s_final + index) = ft_substr(s, 0, len);
+		if(*(s_final + index) == NULL)
+			return (NULL);
+		s += len;
+		index++;
+	}
+	return (s_final);
+}
