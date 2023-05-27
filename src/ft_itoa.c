@@ -6,12 +6,11 @@
 /*   By: r-afonso < r-afonso@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:35:31 by r-afonso          #+#    #+#             */
-/*   Updated: 2023/05/24 09:11:07 by r-afonso         ###   ########.fr       */
+/*   Updated: 2023/05/27 18:32:59 by r-afonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 static int	count(long int n)
 {
@@ -33,7 +32,11 @@ static char	*allocate(int signal, int digits)
 	char	*str;
 
 	if (digits == 0)
+	{
 		str = (char *)ft_calloc(digits + signal + 2, sizeof(char));
+		if (str == NULL)
+			return (NULL);
+	}
 	else
 	{
 		str = (char *)ft_calloc(digits + signal + 1, sizeof(char));
@@ -45,7 +48,7 @@ static char	*allocate(int signal, int digits)
 	return (str);
 }
 
-static char	*zero_case_and_finish(char *str, long int n_long, int index)
+static char	*zero_case(char *str, long int n_long, int index)
 {
 	if (n_long != 0)
 		*(str + index) = '\0';
@@ -60,7 +63,7 @@ char	*ft_itoa(int n)
 	long int	n_long;
 	int			sign;
 
-	index = 0;
+	index = -1;
 	n_long = n;
 	sign = 0;
 	digits = count(n_long);
@@ -70,12 +73,13 @@ char	*ft_itoa(int n)
 		n_long *= -1;
 	}
 	str = allocate(sign, digits);
-	while (index <= digits - 1)
+	if (str == NULL)
+		return (NULL);
+	while (index++, index <= digits - 1)
 	{
 		*(str + digits + sign - index - 1) = n_long % 10 + 48;
 		n_long = n_long / 10;
-		index++;
 	}
-	zero_case_and_finish(str, n_long, index);
+	zero_case(str, n_long, index);
 	return (str);
 }

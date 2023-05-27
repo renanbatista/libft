@@ -6,12 +6,9 @@
 /*   By: r-afonso < r-afonso@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:35:31 by r-afonso          #+#    #+#             */
-/*   Updated: 2023/05/18 21:27:57 by r-afonso         ###   ########.fr       */
+/*   Updated: 2023/05/26 15:20:32 by r-afonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-#include <string.h>
 
 int	ft_atoi(const char *nptr)
 {
