@@ -17,16 +17,16 @@ OBJ = $(addprefix $(SRC_DIR), $(addsuffix .o, $(FILES)))
 BONUS_OBJS = $(addprefix $(SRC_DIR), $(addsuffix .o, $(BONUS)))
 
 UNITY_ROOT= Unity/
-TARGET1 = all_tests.out
+TARGET1 = src/all_tests.out
 SRC_FILES1=\
-  $(UNITY_ROOT)/src/unity.c \
+  $(UNITY_ROOT)/src/unity.c \OBJ
   $(UNITY_ROOT)/extras/fixture/src/unity_fixture.c \
   $(SRC) \
   test/*.c
 INC_DIRS=-I. -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 SYMBOLS=-DUNITY_FIXTURE_NO_EXTRAS
 
-all: $(NAME)
+all: ${SRC_DIR} $(NAME)
 
 run:
 	$(CC) $(CFLAGS) -lbsd $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1) -D UNITY_OUTPUT_COLOR
