@@ -5,6 +5,8 @@
 		"algorithm": "c",
 		"libft.h": "c",
 		"sstream": "c",
-		"stdio.h": "c"
+		"stdio.h": "c",
+		"wchar.h": "c",
+		"stdlib.h": "c"
 	}
 }
