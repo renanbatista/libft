@@ -71,7 +71,3 @@ Para contribuir com a `libft`, faça um fork do repositório, crie uma nova bran
 
 ## Licença
 Este projeto está licenciado sob a MIT License. Veja o arquivo `LICENSE` para mais detalhes.
-
----
-
-Esse README está completo e organizado para fornecer todas as informações necessárias sobre a biblioteca `libft`, incluindo como utilizá-la, contribuir e detalhes importantes sobre as regras de codificação específicas da 42 School.
